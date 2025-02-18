@@ -168,6 +168,13 @@ class ScrollElement extends Component {
     }
   }
 
+  handlePointerDown = (e) => {
+    e.target.setPointerCapture(e.pointerId)
+  }
+  handlePointerUp = (e) => {
+    e.target.releasePointerCapture(e.pointerId)
+  }
+
   componentWillUnmount(){
     if(this.scrollComponent){
       this.scrollComponent.removeEventListener('wheel', this.handleWheel);
@@ -199,6 +206,8 @@ class ScrollElement extends Component {
         onTouchMove={this.handleTouchMove}
         onTouchEnd={this.handleTouchEnd}
         onScroll={this.handleScroll}
+        onPointerDown={this.handlePointerDown}
+        onPointerUp={this.handlePointerUp}
       >
         {children}
       </div>

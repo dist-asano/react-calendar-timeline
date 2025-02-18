@@ -5,6 +5,7 @@ export {
 } from './lib/markers/public/TimelineMarkers'
 export { default as TodayMarker } from './lib/markers/public/TodayMarker'
 export { default as CustomMarker } from './lib/markers/public/CustomMarker'
+export { default as DraggableMarker } from './lib/markers/public/DraggableMarker'
 export { default as CursorMarker } from './lib/markers/public/CursorMarker'
 export { default as TimelineHeaders } from './lib/headers/TimelineHeaders'
 export {default as SidebarHeader} from './lib/headers/SidebarHeader'
