@@ -42,10 +42,8 @@ class DraggableMarker extends CustomMarker {
     super()
 
     this.state = {
-      leftOffset: 0,
       date: 0,
-      isDragging: false,
-      isFinishDrag: false,
+      isDragging: false
     }
   }
 
@@ -68,8 +66,7 @@ class DraggableMarker extends CustomMarker {
         const date = this.dragTime(e)
         this.setState({
           date,
-          isDragging: true,
-          isFinishDrag: false
+          isDragging: true
         })
         if (this.props.onDragStart) {
           this.props.onDragStart(date)
@@ -80,8 +77,7 @@ class DraggableMarker extends CustomMarker {
           const date = this.dragTime(e)
           this.setState({
             date,
-            isDragging: true,
-            isFinishDrag: false
+            isDragging: true
           })
           if (this.props.onDragging) {
             this.props.onDragging(date)
@@ -93,8 +89,7 @@ class DraggableMarker extends CustomMarker {
           const date = this.dragTime(e)
           this.setState({
             date,
-            isDragging: false,
-            isFinishDrag: true
+            isDragging: false
           })
           if (this.props.onDragEnd) {
             this.props.onDragEnd(date)
